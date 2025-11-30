@@ -1,18 +1,18 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Header from "@/components/header";
-import BottomNav from "@/components/bottom-nav";
-import HomeTab from "@/components/home-tab";
-import ManagerTab from "@/components/manager-tab";
-import FridgeTab from "@/components/fridge-tab";
-import RecipeModal from "@/components/recipe-modal";
-import { INITIAL_DISHES } from "@/lib/data";
-import type { Dish, MealTypeId } from "@/lib/types";
-import { recipeFromDish } from "@/ai/flows/recipe-from-dish";
-import { suggestNewDishes } from "@/ai/flows/suggest-new-dishes";
-import { suggestDishesFromIngredients } from "@/ai/flows/suggest-dishes-from-ingredients";
-import { useToast } from "@/hooks/use-toast";
+import Header from "@/frontend/components/header";
+import BottomNav from "@/frontend/components/bottom-nav";
+import HomeTab from "@/frontend/components/home-tab";
+import ManagerTab from "@/frontend/components/manager-tab";
+import FridgeTab from "@/frontend/components/fridge-tab";
+import RecipeModal from "@/frontend/components/recipe-modal";
+import { INITIAL_DISHES } from "@/shared/data";
+import type { Dish, MealTypeId } from "@/shared/types";
+import { recipeFromDish } from "@/backend/ai/flows/recipe-from-dish";
+import { suggestNewDishes } from "@/backend/ai/flows/suggest-new-dishes";
+import { suggestDishesFromIngredients } from "@/backend/ai/flows/suggest-dishes-from-ingredients";
+import { useToast } from "@/frontend/hooks/use-toast";
 
 type ActiveTab = "home" | "fridge" | "manager";
 
